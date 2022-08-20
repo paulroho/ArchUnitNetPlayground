@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using ArchUnitNetPlayground.Console;
+using ArchUnitNetPlayground.ConsoleClient;
 
 // See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");

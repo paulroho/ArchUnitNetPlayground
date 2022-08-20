@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{2D916FFA-509
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.Core.Tests", "tst\ArchUnitNetPlayground.Core.Tests\ArchUnitNetPlayground.Core.Tests.csproj", "{652312DA-F321-4ED8-8549-8B7771DE66F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.Console", "src\ArchUnitNetPlayground.Console\ArchUnitNetPlayground.Console.csproj", "{3AABCD76-4F45-4090-B340-0E37D038C231}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.ConsoleClient", "src\ArchUnitNetPlayground.ConsoleClient\ArchUnitNetPlayground.ConsoleClient.csproj", "{3AABCD76-4F45-4090-B340-0E37D038C231}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
