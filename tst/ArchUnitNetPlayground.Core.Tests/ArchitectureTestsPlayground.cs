@@ -2,6 +2,7 @@ using ArchUnitNET.Domain;
 using ArchUnitNET.Loader;
 using ArchUnitNET.xUnit;
 using ArchUnitNetPlayground.Core.MainComponent;
+using Xunit.Abstractions;
 using static ArchUnitNET.Fluent.ArchRuleDefinition;
 
 namespace ArchUnitNetPlayground.Core.Tests;
@@ -13,13 +14,19 @@ public class ArchitectureTestsPlayground
         typeof(Facade).Assembly
     )
     .Build();
+    private readonly ITestOutputHelper testOutputHelper;
+
+    public ArchitectureTestsPlayground(ITestOutputHelper testOutputHelper)
+    {
+        this.testOutputHelper = testOutputHelper;
+    }
 
     [Fact]
     public void Only_ports_are_used_in_other_components()
     {
         var componentRootNamespace = typeof(ArchUnitNetPlayground.Core.MessageHandling.MessageProvider).Namespace ?? "";
         var componentRootNamespacePattern = $"^{componentRootNamespace.Replace(".", @"\.")}";
-        var componentPortsNamespace = typeof(ArchUnitNetPlayground.Core.MessageHandling.Ports.IMessageProvider).Namespace ?? "";
+        var componentPortsNamespace = componentRootNamespace + ".Ports";
 
         var messageHandlingNonPorts =
             Types().That()
@@ -34,7 +41,14 @@ public class ArchitectureTestsPlayground
         var justPortsAreUsedFromOutsideOfComponentRule = classesOutsideMessageHandling
             .Should().NotDependOnAny(messageHandlingNonPorts);
 
-        justPortsAreUsedFromOutsideOfComponentRule.Check(Architecture);
+        var results = justPortsAreUsedFromOutsideOfComponentRule.Evaluate(Architecture);
+        foreach (var result in results)
+        {
+            testOutputHelper.WriteLine((result.Passed ? "OK" : "!!"));
+            testOutputHelper.WriteLine(result.Description);
+            testOutputHelper.WriteLine(result.ArchRule.Description);
+        }
 
+        justPortsAreUsedFromOutsideOfComponentRule.Check(Architecture);
     }
 }

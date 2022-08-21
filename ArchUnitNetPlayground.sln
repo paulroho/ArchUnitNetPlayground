@@ -1,22 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5F85641F-9084-4F52-B25D-3F21F6805CAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.Core", "src\ArchUnitNetPlayground.Core\ArchUnitNetPlayground.Core.csproj", "{8D06EF75-77EA-483F-B681-DBA69AEFC21B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchUnitNetPlayground.Core", "src\ArchUnitNetPlayground.Core\ArchUnitNetPlayground.Core.csproj", "{8D06EF75-77EA-483F-B681-DBA69AEFC21B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tst", "tst", "{2D916FFA-509C-41A1-A474-4E76B6C685B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.Core.Tests", "tst\ArchUnitNetPlayground.Core.Tests\ArchUnitNetPlayground.Core.Tests.csproj", "{652312DA-F321-4ED8-8549-8B7771DE66F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchUnitNetPlayground.Core.Tests", "tst\ArchUnitNetPlayground.Core.Tests\ArchUnitNetPlayground.Core.Tests.csproj", "{652312DA-F321-4ED8-8549-8B7771DE66F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArchUnitNetPlayground.ConsoleClient", "src\ArchUnitNetPlayground.ConsoleClient\ArchUnitNetPlayground.ConsoleClient.csproj", "{3AABCD76-4F45-4090-B340-0E37D038C231}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArchUnitNetPlayground.ConsoleClient", "src\ArchUnitNetPlayground.ConsoleClient\ArchUnitNetPlayground.ConsoleClient.csproj", "{3AABCD76-4F45-4090-B340-0E37D038C231}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D2008DF7-3603-4F66-8D2D-0B410D4AAC56}"
+	ProjectSection(SolutionItems) = preProject
+		Notes.md = Notes.md
+	EndProjectSection
 EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -63,9 +65,15 @@ Global
 		{3AABCD76-4F45-4090-B340-0E37D038C231}.Release|x86.ActiveCfg = Release|Any CPU
 		{3AABCD76-4F45-4090-B340-0E37D038C231}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{8D06EF75-77EA-483F-B681-DBA69AEFC21B} = {5F85641F-9084-4F52-B25D-3F21F6805CAE}
 		{652312DA-F321-4ED8-8549-8B7771DE66F6} = {2D916FFA-509C-41A1-A474-4E76B6C685B2}
 		{3AABCD76-4F45-4090-B340-0E37D038C231} = {5F85641F-9084-4F52-B25D-3F21F6805CAE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0F06DC25-8807-43F9-9133-3AA0E6DC9AF7}
 	EndGlobalSection
 EndGlobal
