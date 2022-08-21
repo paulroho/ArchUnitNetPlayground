@@ -1,12 +1,13 @@
-﻿using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using ArchUnitNetPlayground.ConsoleClient;
+﻿using ArchUnitNetPlayground.ConsoleClient;
 using ArchUnitNetPlayground.Core;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 using var host = Host.CreateDefaultBuilder(args)
-    .ConfigureServices(services => {
+    .ConfigureServices(services =>
+    {
         services.AddTransient<ConsoleWorker>();
-        services.AddTransient<IFacade, Facade>();
+        services.AddArchUnitNetPlaygroundCore();
     })
     .Build();
 
